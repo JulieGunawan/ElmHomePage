@@ -4,12 +4,20 @@ body {
 
 .layout{
     display: flex;
-    flex-direction: column;
     gap: 32px;
 }
 
 .sidebar {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.home-container {
+    display:flex;
+    height: 100vh;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

@@ -4,24 +4,28 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import View exposing (View)
 
-view: 
-    {
-        title: String
+view: {title: String
         , body: List (Html msg)
-    }
-    -> View msg
+       } -> View msg
+
 
 view props =
     { title = props.title
-    , body =
-        [ div [class "layout"]
-            [ aside [class "sidebar"]
+    , body = 
+        [
+            div [class "layout"]
+            [
+                aside [class "sidebar"]
                 [
-                    a [href "/"][text "Home Page"]
-                    , a [href "/about"] [text "About"]
-                    , a [href "/contact"] [text "Contact"]
-                    , a [href "/account"] [text "Explore"]
+                    a [href "/"][text "Home"]
+                    , a[href "/about"][text "About"]
+                    , a[href "/blogs"] [text "Blogs"]
+                    , a[href "/contact"][text "Contact"]
                 ]
+                , div [class "page"] props.body
             ]
         ]
     }
+            
+        
+    
