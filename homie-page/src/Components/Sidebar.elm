@@ -12,19 +12,19 @@ view: {title: String
 view props =
     { title = props.title
     , body = 
+    [
+        div [class "layout"]
         [
-            div [class "layout"]
+            aside [class "sidebar"]
             [
-                aside [class "sidebar"]
-                [
-                    a [href "/"][text "Home"]
-                    , a[href "/about"][text "About"]
-                    , a[href "/blogs"] [text "Blogs"]
-                    , a[href "/contact"][text "Contact"]
-                ]
-                , div [class "page"] props.body
+                a [href "/"][text "Home"]
+                , a[href "/about"][text "About"]
+                , a[href "/blogs"] [text "Blogs"]
+                , a[href "/contact"][text "Contact"]
             ]
+            , div [class "page"] props.body
         ]
+    ]
     }
             
         
